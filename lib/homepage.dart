@@ -1,6 +1,7 @@
-import 'package:demo1/widget03.dart';
-import 'package:demo1/widgit01.dart';
-import 'package:demo1/widgit02.dart';
+import 'package:demo1/sidebar/sidebar_layout.dart';
+// import 'package:demo1/widgets/widget03.dart';
+// import 'package:demo1/widgets/widgit01.dart';
+// import 'package:demo1/widgets/widgit02.dart';
 import 'package:flutter/material.dart';
 
 
@@ -26,9 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
-            Widget01(),
-            Widget02(),
-            Widget03(),
+            SidebarLayout(),
           ],
         ),
       ),
