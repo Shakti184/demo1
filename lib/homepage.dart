@@ -1,3 +1,4 @@
+import 'package:demo1/widget03.dart';
 import 'package:demo1/widgit01.dart';
 import 'package:demo1/widgit02.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: const <Widget>[
             Widget01(),
             Widget02(),
+            Widget03(),
           ],
         ),
       ),
