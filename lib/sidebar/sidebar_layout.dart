@@ -9,7 +9,6 @@ class SidebarLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children:const <Widget> [
-        HomePage(),
         Sidebar(),
       ],
     );
