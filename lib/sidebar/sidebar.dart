@@ -1,8 +1,11 @@
 
 import 'dart:async';
 import 'package:demo1/sidebar/menu_item.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:flutter/material.dart';
+
+import '../bloc_navigation/navigation_bloc.dart';
 
 class Sidebar extends StatefulWidget {
   const Sidebar({ Key? key }) : super(key: key);
@@ -104,21 +107,41 @@ class _SidebarState extends State<Sidebar> with SingleTickerProviderStateMixin<S
                       indent: 32,
                       endIndent: 32,
                     ),
-                    const Menuitem(
+                     Menuitem(
                       icon: Icons.home, 
                       title: "Home",
+                      onTap: (){
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickEvent);
+                      },
+                      //key: null,
                     ),
-                    const Menuitem(
+                    Menuitem(
                       icon: Icons.person,
                       title: "My Account",
+                      onTap: (){
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.MyAccountClickEvent);
+                      },
+                      //key: null,
                     ),
-                    const Menuitem(
+                    Menuitem(
                       icon: Icons.shopping_basket,
                       title: "My Orders",
+                      onTap: (){
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.MyOrdersClickEvent);
+                      },
+                      //key: null,
                     ),
-                    const Menuitem(
+                    Menuitem(
                       icon: Icons.card_giftcard,
                       title: "Wishlist",
+                      onTap: (){
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickEvent);
+                      },
+                      //key: null,
                     ),
                     Divider(
                       height: 64,
@@ -127,13 +150,23 @@ class _SidebarState extends State<Sidebar> with SingleTickerProviderStateMixin<S
                       indent: 32,
                       endIndent: 32,
                     ),
-                    const Menuitem(
+                    Menuitem(
                       icon: Icons.settings,
                       title: "Settings",
+                      onTap: (){
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickEvent);
+                      },
+                     // key: null,
                     ),
-                    const Menuitem(
+                    Menuitem(
                       icon: Icons.exit_to_app,
                       title: "Log Out",
+                      onTap: (){
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickEvent);
+                      },
+                      //key: null,
                     ),
                   ],
                 ),
